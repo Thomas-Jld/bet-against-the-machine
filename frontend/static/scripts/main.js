@@ -1,5 +1,6 @@
 let batm_contract;
 let user_account;
+let balance = 0;
 
 function startApp() {
     let batm_address = "";
@@ -39,14 +40,23 @@ function getBalance() {
 }
 
 function start() {
-    batm_contract.methods.start().send({
-        from: user_account,
-    }).on(
-        "receipt",
-        function (receipt) {
-            console.log(receipt);
-        }
-    );
+    myp5.start();
+    // batm_contract.methods.start().send({
+    //     from: user_account,
+    // }).on(
+    //     "receipt",
+    //     function (receipt) {
+    //         console.log(receipt);
+    //     }
+    // );
+}
+
+function challenge() {
+    myp5.challenge();
+}
+
+function end() {
+    myp5.end();
 }
 
 
