@@ -29,7 +29,7 @@ contract CumulativeBet is Ownable {
     error InsufficientFunds(uint256 funds, uint256 bet);
 
     /// @notice Generates a random number between 0 and 100 from https://stackoverflow.com/questions/48848948/how-to-generate-a-random-number-in-solidity
-    /// @dev This function is pseudo-random
+    /// @dev This function is pseudo-random, and should be replaced with a more secure one (check Chainlink)
     /// @return RandomNumber in uint256 format between 0 and 100
     function random() private view returns (uint256) {
         return
