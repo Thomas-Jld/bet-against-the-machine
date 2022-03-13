@@ -1,0 +1,60 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+}
+
+canvas {
+    display: block;
+}
+
+.centered {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.note {
+    font-size: 0.6rem;
+    font-style: italic;
+}
+
+/**
+ * ==============================================
+ * Loading dots animation from https://martinwolf.org/before-2018/blog/2015/01/pure-css-savingloading-dots-animation/
+ * ==============================================
+**/
+@keyframes blink {
+    0% {
+        opacity: .2;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .2;
+    }
+}
+
+.saving span {
+    animation-name: blink;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.saving span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.saving span:nth-child(3) {
+    animation-delay: .4s;
+}
