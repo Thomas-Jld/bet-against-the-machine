@@ -11,8 +11,7 @@ function startSketch() {
         let y_rocket_pos = 0;
         let y_challenge_pos = -100;
 
-        let progress = 0;
-        let progress_start = 0;
+        let status = "Idle";
 
         let scenarios = [scenario0, scenario1, scenario2, scenario3];
         let scenario_index = 0;
